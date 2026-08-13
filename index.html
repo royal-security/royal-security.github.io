@@ -740,6 +740,20 @@
             .portal-tabs { justify-content: center; }
         }
     </style>
+    <!-- Netlify Identity widget: catches invite/confirmation links that land
+         on the homepage and shows the set-password dialog -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", (user) => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
 </head>
 <body>
 
