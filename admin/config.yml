@@ -1,7 +1,6 @@
 backend:
-  name: github
-  repo: royal-security/royal-security.github.io   # e.g., royalsecurity/website
-  branch: main
+  name: git-gateway
+  branch: main   # change to master if that's your default branch
 
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
@@ -17,4 +16,4 @@ collections:
       - { label: "Category", name: "category", widget: "string" }
       - { label: "Excerpt", name: "excerpt", widget: "text" }
       - { label: "Body", name: "body", widget: "markdown" }
-  # Add similar collections for departments, announcements, etc.
+  # You can add more collections for departments, etc., later.
